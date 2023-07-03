@@ -15,7 +15,7 @@ function Counter() {
   
   const handlerPlus = () => {
     setProduct(prev => {
-      if (prev.count >= 5) {
+      if (prev.count >= 5 && prev.count < 10) {
          prev.discount = 'Special 10'
          prev.col = 'yellow'
       };
@@ -33,7 +33,7 @@ function Counter() {
 
   const handlerMinus = () => {
     setProduct(prev => {
-      if (prev.count <= 11) {
+      if (prev.count <= 11 && prev.count > 6) {
           prev.discount = 'Special 10'
           prev.col = 'yellow'
       };
@@ -54,7 +54,8 @@ function Counter() {
 
     if (product.count < 0) {
       return (
-        <h2 style={{color: 'red', background: '#eeeeee', padding: 20}}>{product.name}</h2>
+        <h2 style={{color: 'red', background: '#eeeeee',
+        padding: 20}}>{product.name}</h2>
       )
     }
 
@@ -64,6 +65,9 @@ function Counter() {
          background: '#eee', padding: 10,
          marginRight: 150, marginLeft: 150}}>
          {product.name}</h2>
+      <img src = {require('./watermelons.png')}
+      style={{width: 520, height: 60}}></img>
+      <br/>
       <button onClick={handlerMinus}>-</button>
       <span >{product.count}</span>
       <button onClick={handlerPlus}>+</button>
