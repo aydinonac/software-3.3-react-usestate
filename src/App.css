@@ -1,0 +1,29 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #aabbcc;
+}
+
+button {
+  font-size: 2rem;
+  width: 4rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: pink;
+}
+
+span {
+  font-size: 3.0rem;
+  color: blue;
+  font-weight: bold;
+}
+h1 {
+  color: blue;
+  padding: 10px;
+  border: 3px solid blue;
+  margin-top: 10;
+  margin-right: 100px;
+  margin-left: 100px;
+  background-color: #d4f8d4;
+
+}
